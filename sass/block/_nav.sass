@@ -1,0 +1,70 @@
+.header
+    background:rgba(20, 67, 114, 0.3) url("../img/body.jpg")no-repeat top left/cover
+    height: 100vh
+    width: 100%
+.navigation
+    background: rgba(20, 67, 114, 0.6)
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+.nav
+    display: flex
+    width: 100%
+    justify-content: space-between
+    height: 70px
+    align-items: center
+    &_logo
+        position: relative
+        width: 234px
+        height: 57px
+        display: flex
+        align-items: center
+        img
+            width: 100%
+    &_menu
+        width: 478px
+        display: flex
+        justify-content: space-between
+        a
+            color: #ffffff
+            text-transform: uppercase
+            font-size: 14px
+            line-height: 18px
+            position: relative
+            padding-bottom: 5px
+            padding-top: 5px
+            &::before
+                content: ''
+                width: 100%
+                height: 2px
+                position: absolute
+                background: #000000
+                bottom: 0
+                left: 0
+                transition: 0.3s
+                display: none
+            &::after
+                content: ''
+                width: 100%
+                height: 2px
+                position: absolute
+                background: #000000
+                top: 0
+                right: 0
+                transition: 0.3s
+                display: none
+            &:hover::before
+                display: block  
+            &:hover::after
+                display: block  
+              
+    &_btn
+        button
+            text-transform: uppercase
+            padding: 12px 54px
+            color: #ffffff
+            background: #C00606
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            width: 219px
+            height: 44px
+            border: 0
+
+
