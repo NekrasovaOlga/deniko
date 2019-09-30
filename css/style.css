@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -135,7 +136,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 250px;
+  margin-top: 10%;
 }
 
 .hero_title {
@@ -211,5 +212,313 @@ a {
   width: 100%;
   height: 44px;
   border: 0;
+}
+
+.timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-top: 60px;
+  margin-bottom: 60px;
+  font-size: 14px;
+}
+
+.timer_clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-right: 1px solid #000;
+  padding-right: 80px;
+}
+
+.timer_txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.timer_number {
+  font-size: 70px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.timer_participant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 0 80px;
+}
+
+.timer_participant_number {
+  font-size: 70px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.timer_btn {
+  border-left: 1px solid #000;
+  padding-left: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.timer_btn button {
+  text-transform: uppercase;
+  padding: 12px 54px;
+  color: #ffffff;
+  background: #C00606;
+  -webkit-box-shadow: 3px 3px 5px 0 #144372;
+          box-shadow: 3px 3px 5px 0 #144372;
+  height: auto;
+  border: 0;
+  font-size: 18px;
+}
+
+.about-section {
+  background: url("../img/basik.png") no-repeat right top;
+  height: 100vh;
+  background-position-y: -50px;
+  position: relative;
+}
+
+.about {
+  margin-top: 44px;
+  position: relative;
+}
+
+.about_img {
+  position: absolute;
+  width: 450px;
+  left: -35%;
+}
+
+.about_img img {
+  width: 100%;
+}
+
+.about_title h1 {
+  color: #144372;
+  font-weight: 1000;
+  font-size: 24px;
+  line-height: 31px;
+  text-align: right;
+  text-transform: uppercase;
+  position: relative;
+  margin-right: 50px;
+  margin-bottom: 77px;
+}
+
+.about_title h1:before {
+  content: 'О КОНФЕРЕНЦИИ';
+  color: rgba(20, 67, 114, 0.3);
+  right: -5%;
+  top: -35%;
+  position: absolute;
+}
+
+.about_block_txt {
+  width: 50%;
+}
+
+.about_block_txt h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.about_block_txt p {
+  margin: 25px 0;
+  font-size: 14px;
+}
+
+.spicer_title h1 {
+  color: #144372;
+  font-weight: 1000;
+  font-size: 24px;
+  line-height: 31px;
+  text-transform: uppercase;
+  position: relative;
+  margin-right: 50px;
+  margin-bottom: 77px;
+}
+
+.spicer_title h1:before {
+  content: 'СПИКЕРЫ ФОРУМА';
+  color: rgba(20, 67, 114, 0.3);
+  left: 6%;
+  top: -35%;
+  position: absolute;
+}
+
+.programm_section {
+  background: url("../img/book.png") no-repeat center left;
+  background-size: 60%;
+  background-position-x: -40%;
+}
+
+.programm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.programm_title h1 {
+  color: #144372;
+  font-weight: 1000;
+  font-size: 24px;
+  line-height: 31px;
+  text-align: right;
+  text-transform: uppercase;
+  position: relative;
+  margin-right: 50px;
+  margin-bottom: 30px;
+}
+
+.programm_title h1:before {
+  content: 'Программа мероприятия';
+  color: rgba(20, 67, 114, 0.3);
+  right: -5%;
+  top: -35%;
+  position: absolute;
+}
+
+.programm_item {
+  position: relative;
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+}
+
+.programm_item_number {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #144372;
+  border-radius: 50%;
+  background: #144372;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.programm_item p {
+  width: 90%;
+  padding: 0 15px;
+}
+
+.programm_item_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 30px 0;
+  width: 70%;
+}
+
+.programm_item_right p {
+  width: 90%;
+  text-align: right;
+  padding: 0 15px;
+}
+
+.little_line {
+  width: 2px;
+  height: 31px;
+  background: #144372;
+  position: absolute;
+  top: 70px;
+  right: 2%;
+}
+
+.line {
+  width: 96%;
+  height: 2px;
+  background: #144372;
+  position: absolute;
+  top: 100px;
+  right: 2%;
+}
+
+.little_line_top {
+  width: 2px;
+  height: 31px;
+  background: #144372;
+  position: absolute;
+  top: 0px;
+  right: 2%;
+}
+
+.little_line_left_top {
+  width: 2px;
+  height: 32px;
+  background: #144372;
+  position: absolute;
+  top: 0px;
+  left: 2%;
+}
+
+.little_line_left {
+  width: 2px;
+  height: 31px;
+  background: #144372;
+  position: absolute;
+  top: 70px;
+  left: 2%;
 }
 /*# sourceMappingURL=style.css.map */
