@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/timer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <title>Deniko</title>
 </head>
 <body>
+        <script>
+        new WOW().init();
+
+        
+        </script>
     <header class="header">
         <div class="navigation">
             <div class="content">
@@ -15,12 +25,12 @@
                         <div class="nav_logo"><img src="./img/11.png" alt=""></div>
                         <div class="nav_menu">
                             <a href="#" class="nav_menu_item">о конференции</a>
-                            <a href="#" class="nav_menu_item">программа</a>
                             <a href="#" class="nav_menu_item">спикеры</a>
+                            <a href="#" class="nav_menu_item">программа</a>
                             <a href="#" class="nav_menu_item">организаторы</a>
                         </div>
                         <div class="nav_btn">
-                            <button>Забронировать</button>
+                            <button>Принять участие</button>
                         </div>
                         <!-- /.nav_menu -->
                 </div>
@@ -30,17 +40,22 @@
         <div class="hero-section">
             <div class="content">
                 <div class="hero">
-                   <div class="hero_title"> <h1>КОНФЕРЕНЦИЯ 
+                   <div class="hero_title  wow bounceInLeft"> <h1>КОНФЕРЕНЦИЯ 
                        <br>по водоподготовке бассейнов и аквапарков</h1>
                     <h3>28 февраля 2020 года</h3>
                     <p>Мы приглашаем Вас на мероприятие, впервые проходящее на Кавказских Минеральных Водах для обмена знаниями и опытом в сфере
-                    строительства и обслуживания бассейнов, саун, spa зон.</p></div>
-                    <div class="hero_form">
+                    строительства и обслуживания бассейнов, саун, spa зон.</p>
+                    <div class="hero_btn">
+                        <button>Принять участие</button>
+                    </div>
+                </div>
+                    
+                    <div class="hero_form wow bounceInRight">
                         <h3>Оставьте заявку и получите консультацию <em>бесплатно</em></h3>
                         <input type="text" name="" id="" class="hero_input" placeholder="Имя">
                         <input type="tel" name="" id="" class="hero_input" placeholder="Телефон">
                         <input type="email" name="" id="" class="hero_input" placeholder="Почта">
-                        <div class="hero_form_btn"><button>Получить бесплатную консультацию</button></div>
+                        <div class="hero_form_btn"><button>бесплатная консультация</button></div>
                     </div>
                 </div>
             </div>
@@ -53,8 +68,10 @@
                 <div class="timer_clock">
                     <p>До начала конференции в Пятигорске осталось:</p>
                     <div class="timer_number">
-                    <span class="timer_clock_day">00</span>
-                    <span>00:00:00</span>
+                    <span id="days">100</span>
+                    <span id="hours">4</span>
+                    <span id="minutes">12</span>
+                    <span id="seconds">22</span>
                     </div>
                     <div class="timer_txt">
                         <p>Дни</p>
@@ -114,6 +131,15 @@
     </section>
     <!-- /.spicer_section -->
     <section class="programm_section ">
+            <div class="bubble" data-relative-input="true" id="scene">
+            <div class="bub1 " data-depth="0.2"  ><img src="./img/bubble.png" alt=""></div>
+            <div class="bub2 " data-depth="0.5" ><img src="./img/bubble.png" alt=""></div>
+            <div class="bub3 " data-depth="0.2"><img src="./img/bubble.png" alt=""></div>
+            <div class="bub4 " data-depth="0.1"><img src="./img/bubble.png" alt=""></div>
+            <div class="bub5 " data-depth="0.2"><img src="./img/bubble.png" alt=""></div>
+            <div class="bub6 " data-depth="0.3"><img src="./img/bubble.png" alt=""></div>
+            <div class="bub7 " data-depth="0.3"><img src="./img/bubble.png" alt=""></div>
+            </div>
         <div class="content">
             <div class="programm_title"><h1>Программа мероприятия</h1></div>
             <div class="programm">
@@ -125,7 +151,7 @@
                 потребителей в бассейнах. Анализ судебной практики.</p>
                 <div class="programm_item_number number_left">1</div>
                 <span class="little_line"></span>
-                <span class="line"></span>
+                <span class="line1"></span>
             </div>
             <div class="programm_item">
                 <span class="little_line_left_top"></span>
@@ -144,7 +170,7 @@
                     <span class="little_line_top"></span>
                     <div class="programm_item_number number_left">3</div>
                     <span class="little_line"></span>
-                    <span class="line"></span>
+                    <span class="line1"></span>
                    
             </div>
             <div class="programm_item">
@@ -164,7 +190,7 @@
                     <span class="little_line_top"></span>
                      <div class="programm_item_number number_left">5</div>
                     <span class="little_line"></span>
-                <span class="line"></span>
+                <span class="line1"></span>
             </div>
             <div class="programm_item">
                     <span class="little_line_left_top"></span>
@@ -186,7 +212,7 @@
                     <span class="little_line_top"></span>
                     <div class="programm_item_number number_left">7</div>
                     <span class="little_line"></span>
-                    <span class="line"></span>
+                    <span class="line1"></span>
             </div>
             <div class="programm_item">
                     <span class="little_line_left_top"></span>
@@ -196,13 +222,7 @@
             </div>
             <!-- /.programm_item -->
             </div>
-            <span class="bubble bub1"><img src="./img/bubble.png" alt=""></span>
-            <span class="bubble bub2"><img src="./img/bubble.png" alt=""></span>
-            <span class="bubble bub3"><img src="./img/bubble.png" alt=""></span>
-            <span class="bubble bub4"><img src="./img/bubble.png" alt=""></span>
-            <span class="bubble bub5"><img src="./img/bubble.png" alt=""></span>
-            <span class="bubble bub6"><img src="./img/bubble.png" alt=""></span>
-            <span class="bubble bub7"><img src="./img/bubble.png" alt=""></span>
+            
             
         </div>
         <!-- /.content -->
@@ -282,5 +302,14 @@
         
     </div>
    </footer>
+   
+   <script src="//code.jivosite.com/widget.js" data-jv-id="TCG5VSBuaI" async></script>
+   <script>countdown();
+   
+   var scene = document.getElementById('scene');
+   var parallaxInstance = new Parallax(scene, {
+    });
+   </script>
+   
 </body>
 </html>

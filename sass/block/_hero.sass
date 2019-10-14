@@ -2,6 +2,7 @@
     display: flex
     align-items: center
     height: 90vh
+    min-height: 500px
     &_title
         width: 60%
         color: #ffffff
@@ -29,7 +30,7 @@
         box-shadow: 2px 2px 15px 0 rgba(20, 67, 114, 1)
         h3
             text-align: right
-            font-size: 18px
+            font-size: 1.4em
             line-height: 31px
             color: #ffffff
             font-weight: 400
@@ -44,12 +45,80 @@
             margin-top: 30px
             button
                 text-transform: uppercase
-                padding: 12px 54px
+                padding: 12px 0
                 color: #ffffff
+                font-size: 1em
                 background: #C00606
                 box-shadow: 3px 3px 5px 0 rgba(20, 67, 114, 1)
                 width: 100%
                 height: 44px
                 border: 0
+    &_btn
+        display: none
 
 
+@media (max-width: 1200px) and (min-width: 1070px)
+    .hero
+        &_title
+            width: 60%   
+            h1
+                font-size: 2.8em
+                line-height: 45px
+            h3
+                font-size: 2em
+                line-height: 35px
+            p
+                font-size: 1.2em
+        &_btn
+            button
+                padding: 12px 0
+
+            
+
+@media (max-width: 1069px) and (min-width: 940px)
+    .hero
+        &_title
+            width: 60%   
+            h1
+                font-size: 2.4em
+                line-height: 45px  
+            h3
+                font-size: 2em
+                line-height: 35px
+            p
+                font-size: 1.2em
+        
+@media (max-width: 939px) and (min-width: 320px)
+    .hero
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &_title
+            width: 100% 
+            h1
+                font-size: 2em
+                line-height: 35px  
+                width: 100% 
+            h3
+                font-size: 1,8em
+                line-height: 35px
+                width: 60%
+            p
+                font-size: 1em
+                width: 60%
+        &_form
+            display: none
+        &_btn
+            display: block
+            margin-top: 30px
+            button
+                text-transform: uppercase
+                padding: 12px 0
+                color: #ffffff
+                font-size: 1em
+                background: #C00606
+                box-shadow: 3px 3px 5px 0 rgba(20, 67, 114, 1)
+                width: 60%
+                height: 44px
+                border: 0
+        
