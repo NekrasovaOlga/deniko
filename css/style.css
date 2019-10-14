@@ -360,7 +360,6 @@ a {
   width: 100%;
   padding-top: 60px;
   margin-bottom: 60px;
-  font-size: 14px;
 }
 
 .timer_clock {
@@ -384,7 +383,7 @@ a {
 }
 
 .timer_number {
-  font-size: 70px;
+  font-size: 5em;
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -402,7 +401,7 @@ a {
 }
 
 .timer_participant_number {
-  font-size: 70px;
+  font-size: 5em;
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -435,10 +434,67 @@ a {
   border: 0;
 }
 
+@media (max-width: 1150px) and (min-width: 700px) {
+  .timer_clock {
+    padding-right: 0;
+    border-right: none;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .timer_number {
+    font-size: 4em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+  .timer_participant {
+    display: none;
+    padding: 0;
+  }
+  .timer_btn {
+    width: 40%;
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+@media (max-width: 699px) and (min-width: 0px) {
+  .timer_clock {
+    padding-right: 0;
+    border-right: none;
+    width: 100%;
+  }
+  .timer_number {
+    font-size: 4em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+  .timer_participant {
+    display: none;
+    padding: 0;
+  }
+  .timer_btn {
+    display: none;
+    padding: 0;
+  }
+}
+
 .about-section {
-  background: url("../img/basik.png") no-repeat right top;
   height: 100vh;
   position: relative;
+  min-height: 500px;
+  margin-bottom: 40px;
 }
 
 .about {
@@ -450,9 +506,19 @@ a {
   position: absolute;
   width: 250px;
   left: 0;
+  opacity: 0.5;
 }
 
 .about_img img {
+  width: 100%;
+}
+
+.about_img2 {
+  position: absolute;
+  right: 0;
+}
+
+.about_img2 img {
   width: 100%;
 }
 
@@ -490,6 +556,31 @@ a {
 .about_block_txt p {
   margin: 25px 0;
   font-size: 14px;
+}
+
+@media (max-width: 1100px) and (min-width: 801px) {
+  .about_img {
+    opacity: 0.4;
+    width: 200px;
+  }
+  .about_img2 {
+    opacity: 0.4;
+    right: -30%;
+  }
+  .about_block_txt {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 0px) {
+  .about_img2 {
+    display: none;
+  }
+  .about_block_txt {
+    width: 100%;
+    opacity: 1;
+  }
 }
 
 .spicer_title h1 {
@@ -771,6 +862,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   height: 60vh;
+  width: 100%;
 }
 
 .registration_form {
@@ -781,6 +873,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 40%;
 }
 
 .registration_form_title {
@@ -824,10 +917,49 @@ a {
   text-transform: uppercase;
   color: #ffffff;
   font-size: 14px;
+  width: 50%;
 }
 
 .registration_text p {
   margin-top: 22px;
+}
+
+@media (max-width: 949px) and (min-width: 0px) {
+  .section-registration {
+    padding: 100px 0;
+    height: auto;
+    position: relative;
+    width: 100%;
+  }
+  .registration {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .registration_form {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .registration_text {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .organizer {

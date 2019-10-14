@@ -1,8 +1,8 @@
 .about-section
-    background: url('../img/basik.png')no-repeat right top
     height: 100vh
     position: relative
-
+    min-height: 500px
+    margin-bottom: 40px
 .about
     margin-top: 44px
     position: relative
@@ -10,6 +10,12 @@
         position: absolute
         width: 250px
         left: 0
+        opacity: 0.5
+        img
+            width: 100%
+    &_img2
+        position: absolute
+        right: 0
         img
             width: 100%
     &_title
@@ -39,3 +45,24 @@
         p
             margin: 25px 0
             font-size: 14px
+
+
+@media (max-width: 1100px) and (min-width: 801px)
+    .about
+        &_img
+            opacity: 0.4
+            width: 200px
+        &_img2
+            opacity: 0.4
+            right: -30%
+
+        &_block_txt
+            width: 100%
+            opacity: 1
+@media (max-width: 800px) and (min-width: 0px)
+    .about
+        &_img2
+            display: none
+        &_block_txt
+            width: 100%
+            opacity: 1
