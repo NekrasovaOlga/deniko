@@ -1076,7 +1076,8 @@ a {
   position: relative;
   background: #000;
   width: 100%;
-  height: 80vh;
+  height: auto;
+  max-height: 100%;
 }
 
 .section-map iframe {
@@ -1116,8 +1117,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 450px;
-  height: 400px;
+  width: 50%;
   position: absolute;
   padding: 30px 23px;
   background: rgba(0, 0, 0, 0.57);
