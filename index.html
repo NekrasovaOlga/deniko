@@ -10,6 +10,7 @@
     <script src="./js/wow.min.js"></script>
     <script src="./js/timer.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Deniko</title>
 </head>
 <body>
@@ -24,10 +25,10 @@
                 <div class="nav">
                         <div class="nav_logo"><img src="./img/11.png" alt=""></div>
                         <div class="nav_menu">
-                            <a href="#" class="nav_menu_item">о конференции</a>
-                            <a href="#" class="nav_menu_item">спикеры</a>
-                            <a href="#" class="nav_menu_item">программа</a>
-                            <a href="#" class="nav_menu_item">организаторы</a>
+                            <a href="#about" class="nav_menu_item">о конференции</a>
+                            <a href="#spiker" class="nav_menu_item">спикеры</a>
+                            <a href="#program" class="nav_menu_item">программа</a>
+                            <a href="#organiz" class="nav_menu_item">организаторы</a>
                         </div>
                         <div class="nav_btn">
                             <button>Принять участие</button>
@@ -69,8 +70,8 @@
                     <p>До начала конференции в Пятигорске осталось:</p>
                     <div class="timer_number">
                     <span id="days">100</span>
-                    <span id="hours">4</span>
-                    <span id="minutes">12</span>
+                    <span id="hours">4</span><span> : </span>
+                    <span id="minutes">12</span><span> : </span>
                     <span id="seconds">22</span>
                     </div>
                     <div class="timer_txt">
@@ -96,7 +97,7 @@
         <!-- /.content -->
     </section>
     <!-- /.timer-section -->
-    <section class="about-section ">
+    <section class="about-section " id="about">
             <div class="about_img2"><img src="./img/basik.png" alt=""></div>
             <div class="about_img"><img src="./img/swim.png" alt=""></div>
         <div class="content">
@@ -122,16 +123,33 @@
         </div>
     </section>
     <!-- /.about -->
-    <section class="spicer_section">
+    <section class="spicer_section" id="spiker">
+        
         <div class="content">
             <div class="spicer">
                 <div class="spicer_title"><h1>Спикеры ФОРУМА</h1></div>
+                <div class="spicer_list">
+                    <div class="spicer_list_item">
+                        <div class="spicer_list_item_img"><img src="" alt=""></div>
+                        <div class="spicer_list_item_title">Маркизова Светлана Владимировна</div>
+                        <div class="spicer_list_item_text">Генеральный директор
+                            «Центра обучения и сертификации специалистов аквапарков и бассейнов»,
+                            технический эксперт Росаккредитации г. Санкт-Петербург, кандидат химических наук</div>
+                    </div>
+                    <div class="spicer_list_item">
+                        <div class="spicer_list_item_img"><img src="" alt=""></div>
+                        <div class="spicer_list_item_title">Маркизов Михаил Отчество</div>
+                        <div class="spicer_list_item_text">Руководитель химической 
+                            лаборатории аквапарка Питерленд</div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="spicers_background"></div>
         <!-- /.content -->
     </section>
     <!-- /.spicer_section -->
-    <section class="programm_section ">
+    <section class="programm_section " id="program">
             <div class="bubble" data-relative-input="true" id="scene">
             <div class="bub1 " data-depth="0.2"  ><img src="./img/bubble.png" alt=""></div>
             <div class="bub2 " data-depth="0.5" ><img src="./img/bubble.png" alt=""></div>
@@ -144,7 +162,7 @@
         <div class="content">
             <div class="programm_title"><h1>Программа мероприятия</h1></div>
             <div class="programm">
-            <div class="programm_item_right">
+            <div class="programm_item_right wow fadeInRightBig">
                 
                 <p><strong>Основная нормативная база РФ в сфере эксплуатации плавательных бассейнов.<br></strong> 
 
@@ -154,7 +172,7 @@
                 <span class="little_line"></span>
                 <span class="line1"></span>
             </div>
-            <div class="programm_item">
+            <div class="programm_item   wow fadeInLeftBig">
                 <span class="little_line_left_top"></span>
                 <div class="programm_item_number">2</div>
                 <span class="little_line_left"></span>
@@ -164,7 +182,7 @@
                     Основания для признания результатов проверки недействительными.</p>
                 
             </div>
-            <div class="programm_item_right">
+            <div class="programm_item_right  wow fadeInRightBig">
                
                 <p><strong>Подбор оборудования с учетом требований НД, Примерный гидравлический расчет. <br></strong>
                     Требования к процессу прохождения воды в бассейне. Расчет процессов очистки и обеззараживания воды.</p>
@@ -174,7 +192,7 @@
                     <span class="line1"></span>
                    
             </div>
-            <div class="programm_item">
+            <div class="programm_item   wow fadeInLeftBig">
                     <span class="little_line_left_top"></span>
                     <div class="programm_item_number">4</div>
                     <span class="little_line_left"></span>
@@ -184,7 +202,7 @@
                 
                 
             </div>
-            <div class="programm_item_right">
+            <div class="programm_item_right  wow fadeInRightBig">
                
                 <p><strong>Системы дезинфекции.<br></strong>
                     Контроллеры и дозирующее оборудование. Электролизеры. Ультрафиолетовые лампы. Озонаторы. Техническое обслуживание и организация безопасной эксплуатации.</p>
@@ -193,7 +211,7 @@
                     <span class="little_line"></span>
                 <span class="line1"></span>
             </div>
-            <div class="programm_item">
+            <div class="programm_item   wow fadeInLeftBig">
                     <span class="little_line_left_top"></span>
                     <div class="programm_item_number">6</div>
                     <span class="little_line_left"></span>
@@ -205,7 +223,7 @@
                     Применяемые химические реагенты. </p>
                 
             </div>
-            <div class="programm_item_right">
+            <div class="programm_item_right  wow fadeInRightBig">
                 
                 
                 <p><strong>Организация и принципы санитарно-эпидемиологического контроля воды, воздуха и инвентаря.<br></strong> 
@@ -215,7 +233,7 @@
                     <span class="little_line"></span>
                     <span class="line1"></span>
             </div>
-            <div class="programm_item">
+            <div class="programm_item  wow fadeInLeftBig">
                     <span class="little_line_left_top"></span>
                     <div class="programm_item_number">8</div>
                 <p><strong>Контроль деятельности подрядной организации по выполнению работ по обслуживанию бассейна.</strong></p>
@@ -229,7 +247,7 @@
         <!-- /.content -->
     </section>
     <!-- /.programm_section -->
-   <section class="section-registration">
+   <section class="section-registration" >
        <div class="content">
            <div class="registration">
                <div class="registration_form">
@@ -241,7 +259,7 @@
                    </form>
                    <button class="registration_form_btn">Отправить запрос</button>
                </div>
-               <div class="registration_text">
+               <div class="registration_text wow slideInUp">
                    <p>Дата проведения мероприятия:  28 февраля 2020г.</p>
                    <p>Стоимость посещения конференции 3000 РУБЛЕЙ</p>
                    <p>Место проведения: г. Пятигорск, Конференц-зал «Бештау», ул. Бульварная ул., 17</p>
@@ -253,7 +271,7 @@
        <!-- /.content -->
    </section>
    <!-- /.section-registration -->
-   <section class="organizer-section">
+   <section class="organizer-section" id="organiz">
        <div class="content">
            <div class="organizer">
                <h1 class="organizer_title">организаторы</h1>
@@ -278,7 +296,7 @@
    <section class="section-map">
     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8b354c87f4d6c40f2a32c66752179ca233008fefa6645682e66d328846ae5e10&amp;source=constructor" frameborder="0"></iframe>
        <div class="content">
-           <div class="map">
+           <div class="map wow rotateInUpLeft">
                <div class="map_block">
                 <h3 class="map_title">Контакты</h3>
                 <div class="map_text">
@@ -305,7 +323,18 @@
    </footer>
    
    <script src="//code.jivosite.com/widget.js" data-jv-id="TCG5VSBuaI" async></script>
-   <script>countdown();
+   <script>
+       $(document).ready(function(){
+	// плавное перемещение страницы к нужному блоку
+	$(".nav_menu_item").click(function () {
+		elementClick = $(this).attr("href");
+		destination = $(elementClick).offset().top;
+		$("body,html").animate({scrollTop: destination }, 1800);
+	});
+});
+   
+   
+   countdown();
    
    var scene = document.getElementById('scene');
    var parallaxInstance = new Parallax(scene, {

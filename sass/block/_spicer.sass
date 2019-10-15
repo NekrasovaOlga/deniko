@@ -1,6 +1,22 @@
 .spicer_section
+    width: 100%
+    height: auto
+    max-height: 100%
+    min-height: 80vh
+    padding: 100px 0
     position: relative
+    background: url("../img/water.jpg") top center/cover
+    z-index: -99
+.spicers_background  
+    position: absolute
+    background: rgba(93, 130, 168, 0.349)
+    width: 100%
+    top: 0
+    height: 100%
+    z-index: -80
 .spicer
+    z-index: 19
+    width: 100%
     &_title
         h1
             color: #144372
@@ -17,3 +33,44 @@
                 left: 6%
                 top: -35%
                 position: absolute
+    &_list
+        display: flex
+        width: 100%
+        height: auto
+        max-height: 100%
+        justify-content: space-between
+        
+        &_item
+            width: 40%
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin: 50px 0
+            text-align: center
+            &_img
+                width: 50%
+                height: 250px
+                background: black
+                margin-bottom: 20px
+            &_title
+                margin-bottom: 20px
+                font-size: 1.5em
+                font-weight: bold
+
+    
+@media (max-width: 940px) and (min-width: 640px)
+    .spicer
+        &_list
+            &_item
+                &_img
+                    width: 80%
+
+@media (max-width: 639px) and (min-width: 0px)
+    .spicer
+        &_list
+            display: flex
+            flex-direction: column
+            &_item
+                width: 100%
+                &_img
+                    width: 50%
