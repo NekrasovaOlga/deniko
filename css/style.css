@@ -23,9 +23,11 @@ a {
 
 .header {
   background: rgba(20, 67, 114, 0.3) url("../img/body.jpg") no-repeat top left/cover;
-  height: 100vh;
   width: 100%;
+  height: auto;
   max-height: 100%;
+  min-height: 100vh;
+  position: relative;
 }
 
 .navigation {
@@ -36,6 +38,10 @@ a {
   display: block;
   width: 100%;
   z-index: 999;
+}
+
+.nav_menu_humb {
+  display: none;
 }
 
 .nav {
@@ -140,11 +146,106 @@ a {
 }
 
 @media (max-width: 800px) and (min-width: 0px) {
+  .nav {
+    width: 100%;
+  }
   .nav_btn {
     display: none;
   }
   .nav_menu {
     display: none;
+  }
+  .nav_menu_humb {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    right: 0;
+    z-index: 99999;
+    width: 240px;
+    height: 100vh;
+    margin-top: 40%;
+    padding: 20px 5px;
+    display: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background: rgba(20, 67, 114, 0.6);
+  }
+  .nav_menu_humb_item {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 5px #000;
+  }
+  .menu_humb {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: relative;
+    z-index: 999999;
+  }
+  .menu_humb span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 20px;
+    height: 2px;
+    background: #222222;
+  }
+  .menu_humb span:before {
+    content: '';
+    top: 50%;
+    position: absolute;
+    width: 20px;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+    top: 0;
+    height: 2px;
+    background: #222222;
+    display: block;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .menu_humb span:after {
+    content: '';
+    position: absolute;
+    top: 70%;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    width: 20px;
+    height: 2px;
+    background: #222222;
+    display: block;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .menu_humb_active span {
+    height: 0;
+  }
+  .menu_humb_active span:after {
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+  }
+  .menu_humb_active span:before {
+    -webkit-transform: rotate(-35deg);
+            transform: rotate(-35deg);
+  }
+  .nav_menu_humb_active {
+    display: block;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
 }
 
@@ -923,11 +1024,12 @@ a {
   width: 100%;
   height: auto;
   max-height: 100%;
+  min-height: 60vh;
+  position: relative;
   background: url("../img/registration_body.png") no-repeat left top/cover;
 }
 
 .registration {
-  margin: 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -937,8 +1039,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 60vh;
   width: 100%;
+  min-height: 60vh;
+  position: relative;
 }
 
 .registration_form {
@@ -1120,17 +1223,16 @@ a {
 }
 
 .section-map {
-  position: relative;
-  background: #000;
   width: 100%;
   height: auto;
-  max-height: 100%;
   min-height: 80vh;
+  padding: 50px 0;
+  position: relative;
 }
 
 .section-map iframe {
   width: 100%;
-  height: 100%;
+  height: 90%;
   position: absolute;
 }
 
@@ -1143,9 +1245,9 @@ a {
 }
 
 .map {
-  position: relative;
   z-index: 5;
-  height: 80vh;
+  min-height: 60vh;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1212,13 +1314,34 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 10px;
+}
+
+@media (max-width: 1100px) and (min-width: 801px) {
+  .map {
+    min-height: 100vh;
+  }
+  .map_block {
+    width: 50%;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 631px) {
+  .map {
+    min-height: 100vh;
+  }
+  .map_block {
+    width: 70%;
+  }
 }
 
 @media (max-width: 630px) and (min-width: 0px) {
+  .map {
+    min-height: 100vh;
+  }
   .map_block {
     width: 100%;
   }

@@ -1,8 +1,10 @@
 .header
     background:rgba(20, 67, 114, 0.3) url("../img/body.jpg")no-repeat top left/cover
-    height: 100vh
     width: 100%
+    height: auto
     max-height: 100%
+    min-height: 100vh
+    position: relative
 .navigation
     background: rgba(20, 67, 114, 0.6)
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
@@ -10,6 +12,8 @@
     display: block
     width: 100%
     z-index: 999
+.nav_menu_humb
+    display: none
 .nav
     display: flex
     width: 100%
@@ -85,9 +89,79 @@
     .header
         
     .nav
+        width: 100%
         &_logo
             
         &_btn
             display: none
         &_menu
             display: none
+    .nav_menu_humb
+        position: absolute
+        display: flex
+        flex-direction: column
+        align-items: center
+        right: 0
+        z-index: 99999
+        width: 240px
+        height: 100vh
+        margin-top: 40%
+        padding: 20px 5px 
+        display: none
+        transition: 0.5s
+        background: rgba(20, 67, 114, 0.6)
+        &_item
+            color: #ffffff
+            display: block
+            margin-bottom: 15px
+            text-transform: uppercase
+            text-shadow: 1px 2px 5px #000
+    .menu_humb
+        display: block
+        width: 50px
+        height: 50px
+        background: #ffffff
+        border-radius: 50%
+        position: relative
+        z-index: 999999
+        span
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            width: 20px
+            height: 2px
+            background: #222222
+            &:before
+                content: ''
+                top: 50%
+                position: absolute
+                width: 20px
+                transform: translateY(-5px)
+                top: 0
+                height: 2px
+                background: #222222
+                display: block
+                transition: 0.5s
+            &:after
+                content: ''
+                position: absolute
+                top: 70%
+                transform: translateY(5px)
+                width: 20px
+                height: 2px
+                background: #222222
+                display: block
+                transition: 0.5s
+    .menu_humb_active span
+        height: 0
+    .menu_humb_active span:after
+        transform: rotate(35deg)
+    .menu_humb_active span:before
+        transform: rotate(-35deg)
+    .nav_menu_humb_active
+        display: block
+        transition: 0.5s
+            
+
+                

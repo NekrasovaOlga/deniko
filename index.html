@@ -20,7 +20,15 @@
             <div class="content">
                 <div class="nav">
                         <div class="nav_logo"><img src="./img/11.png" alt=""></div>
+                        <a href="#" class="menu_humb"><span></span></a>
+                        <div class="nav_menu_humb">
+                            <a href="#about" class="nav_menu_humb_item">о конференции</a>
+                            <a href="#spiker" class="nav_menu_humb_item">спикеры</a>
+                            <a href="#program" class="nav_menu_humb_item">программа</a>
+                            <a href="#organiz" class="nav_menu_humb_item">организаторы</a>
+                        </div>
                         <div class="nav_menu">
+                            
                             <a href="#about" class="nav_menu_item">о конференции</a>
                             <a href="#spiker" class="nav_menu_item">спикеры</a>
                             <a href="#program" class="nav_menu_item">программа</a>
@@ -349,7 +357,13 @@
 	});
 });
    
-   
+
+    $('.menu_humb').on('click', function(e){
+    e.preventDefault;
+    $(this).toggleClass('menu_humb_active');
+    $('.nav_menu_humb').toggleClass('nav_menu_humb_active');
+    });
+
    countdown();
    modal();
    var scene = document.getElementById('scene');

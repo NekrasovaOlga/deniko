@@ -66,4 +66,6 @@ function modal() {
             modal.style.display = "none";
         }
     }
-}
+};
+
+
