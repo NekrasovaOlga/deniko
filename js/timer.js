@@ -34,3 +34,36 @@ function countdown(){
 
 
 }
+
+
+
+
+function modal() {
+    var modal = document.getElementById("myModal");
+    var butn = document.getElementById("myBtnCL");
+    var butn1 = document.getElementById("myBtnCL1");
+    var butn2 = document.getElementById("myBtnCL2");
+    var butn3 = document.getElementById("myBtnCL3");
+    var span = document.getElementsByClassName("close")[0];
+
+    butn.onclick = function (){
+        modal.style.display = "block";
+    }
+    butn1.onclick = function (){
+        modal.style.display = "block";
+    }
+    butn2.onclick = function (){
+        modal.style.display = "block";
+    }
+    butn3.onclick = function (){
+        modal.style.display = "block";
+    }
+    span.onclick = function (){
+        modal.style.display = "none";
+    }
+    window.onclick = function(event){
+        if (event.target == modal){
+            modal.style.display = "none";
+        }
+    }
+}
