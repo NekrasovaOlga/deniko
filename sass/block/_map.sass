@@ -2,6 +2,7 @@
     width: 100%
     height: auto
     min-height: 80vh
+    max-height: 100%
     padding: 50px 0
     position: relative
     iframe
@@ -12,7 +13,6 @@
     width: 100%
     height: 80vh
     position: absolute
-    border: 1px solid red
     z-index: 0
 .map
     z-index: 5
@@ -51,11 +51,16 @@
         width: 100%
         height: 44px
         border: 0
+        transition: 0.5s
+        &:hover
+            background: #ffde00
+            color: #000000
 
 .footer
     height: 40px
     width: 100%
     display: flex
+    font-size: 1em
     justify-content: center
     align-items: center
     margin-top: 10px
@@ -73,7 +78,26 @@
             width: 70%
 
 @media (max-width: 630px) and (min-width: 0px)
+    .section-map
+        display: flex
+        flex-direction: column-reverse
+        background: rgba(20, 67, 114, 1)
+        width: 100%
+        padding-bottom: 0
+        iframe
+            height: 250px
+            position: relative
+    .map_yandex
+        
+        position: relative
+        border: 1px solid red
     .map
-        min-height: 100vh
+        height: 500px
+        color: #000000
+        margin-bottom: 10px
         &_block
             width: 100%
+            color: #000000
+            background: none
+    .footer
+        font-size: 0.7em

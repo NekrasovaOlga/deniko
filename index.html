@@ -7,40 +7,56 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/animate.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="./js/wow.min.js"></script>
-    <script src="./js/timer.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Deniko</title>
+    
+    <title>Конференция по водоподготовке бассейнов и аквапарков в Пятигорске</title>
+    <meta content="Мы приглашаем Вас на мероприятие, впервые проходящее на Кавказских Минеральных Водах для обмена знаниями и опытом в сфере строительства и обслуживания бассейнов, саун, spa зон." name="description">
+    <meta name="keywords" content="Конференция, купить билет, бассейн, аквапарки, мероприятие" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-        
-    <header class="header">
-        <div class="navigation">
-            <div class="content">
-                <div class="nav">
-                        <div class="nav_logo"><img src="./img/11.png" alt=""></div>
-                        <a href="#" class="menu_humb"><span></span></a>
-                        <div class="nav_menu_humb">
-                            <a href="#about" class="nav_menu_humb_item">о конференции</a>
-                            <a href="#spiker" class="nav_menu_humb_item">спикеры</a>
-                            <a href="#program" class="nav_menu_humb_item">программа</a>
-                            <a href="#organiz" class="nav_menu_humb_item">организаторы</a>
-                        </div>
-                        <div class="nav_menu">
-                            
-                            <a href="#about" class="nav_menu_item">о конференции</a>
-                            <a href="#spiker" class="nav_menu_item">спикеры</a>
-                            <a href="#program" class="nav_menu_item">программа</a>
-                            <a href="#organiz" class="nav_menu_item">организаторы</a>
-                        </div>
-                        <div class="nav_btn">
-                            <button id="myBtnCL">Принять участие</button>
-                        </div>
-                        <!-- /.nav_menu -->
+    <div class="nav_menu_humb">
+        <a href="#about" class="nav_menu_humb_item">о конференции</a>
+        <a href="#spiker" class="nav_menu_humb_item">спикеры</a>
+        <a href="#program" class="nav_menu_humb_item">программа</a>
+        <a href="#organiz" class="nav_menu_humb_item">организаторы</a>
+        <div class="nav_menu_humb_contact">
+            <h3 >Контакты</h3>
+                <div>
+                    <p>Координатор: Татьяна</p>
+                    <p>Телефон: 8 962 42 000 30</p>
+                    <p>Эл.почта: denico_group@bk.ru</p>
+                    <p>Дата проведения мероприятия:  28 февраля 2020г.</p>
+                    <p>Время проведения:  с 10:00 до 18:00 ЧАСОВ</p>
+                    <p>КОЛИЧЕСТВО УЧАСТНИКОВ ОГРАНИЧЕННО!</p>
                 </div>
+        </div>
+        
+        <div class="nav_menu_humb_btn">
+            <button id="myBtnCL2">Хочу учавствовать</button>
+    </div>
+    </div>  
+    <div class="navigation">
+        <div class="content">
+            <div class="nav">
+                    <div class="nav_logo"><img src="./img/11.png" alt=""></div>
+                    <a href="#" class="menu_humb"><span></span></a>
+                    
+                    <div class="nav_menu">
+                        
+                        <a href="#about" class="nav_menu_item">о конференции</a>
+                        <a href="#spiker" class="nav_menu_item">спикеры</a>
+                        <a href="#program" class="nav_menu_item">программа</a>
+                        <a href="#organiz" class="nav_menu_item">организаторы</a>
+                    </div>
+                    <div class="nav_btn">
+                        <button id="myBtnCL">Принять участие</button>
+                    </div>
+                    <!-- /.nav_menu -->
             </div>
         </div>
+    </div> 
+    <header class="header">
+        
         <!-- /.navigation-->
         <div class="hero-section">
             <div class="content">
@@ -57,8 +73,8 @@
                     
                     <form action="./js/mail.php" method="POST" class="hero_form wow bounceInRight">
                         <h3>Оставьте заявку и получите консультацию <em>бесплатно</em></h3>
-                        <input type="text" name="user_name" id="" class="hero_input" placeholder="Имя">
-                        <input type="tel" name="user_phone" id="" class="hero_input" placeholder="Телефон">
+                        <input type="text" name="user_name" id="" class="hero_input" placeholder="Имя" required>
+                        <input type="tel" name="user_phone" id="phone1" class="hero_input" placeholder="Телефон" required>
                         <input type="email" name="user_mail" id="" class="hero_input" placeholder="Почта">
                         <div class="hero_form_btn" ><button type="submit">бесплатная консультация</button></div>
                     </form>
@@ -86,12 +102,7 @@
                     </div>
 
                 </div>
-                <div class="timer_participant" >
-                    <p>Уже записалось</p>
-                    <p class="timer_participant_number"><span>0</span> </p>
-                    <p >участников</p>
-                </div>
-                <div class="timer_btn" id="myBtn">
+                <div class="timer_btn">
                         <button id="myBtnCL2">Хочу учавствовать</button>
                 </div>
                 <!-- /.timer_participant -->
@@ -257,9 +268,9 @@
                <div class="registration_form">
                    <h3 class="registration_form_title">Забронировать место</h3>
                    <form action="./js/mail.php" method="POST" class="registration_form_input">
-                        <input type="text" name="user_name" id="" class="registration_form_input_name" placeholder="Имя">
-                        <input type="tel" name="user_tel" id="" class="registration_form_input_tel" placeholder="Телефон">
-                        <input type="email" name="user_mail" id="" class="registration_form_input_mail" placeholder="Почтовый адрес">
+                        <input type="text" name="user_name" id="" class="registration_form_input_name" placeholder="Имя" required>
+                        <input type="tel" name="user_tel" id="phone2" class="registration_form_input_tel" placeholder="Телефон" required>
+                        <input type="email" name="user_mail" id="" class="registration_form_input_mail" placeholder="Почтовый адрес" required>
                         <button class="registration_form_btn" type="submit" >Отправить запрос</button>
                    </form>
                    
@@ -321,10 +332,7 @@
    </section>
    <!-- /.section-map -->
    <footer >
-    <div class="content">
         <div class="footer"><p>Информация на сайте не является публичной офертой и носит ознакомительный характер</p></div>
-        
-    </div>
    </footer>
    
 
@@ -333,36 +341,51 @@
            <span class="close">&times;</span>
            <form action="./js/mail.php" method="POST" class="modal_form">
             <h3>Оставьте заявку и получите консультацию <em>бесплатно</em></h3>
-            <input type="text" name="user_name" id="" class="modal_input" placeholder="Имя">
-            <input type="tel" name="user_phone" id="" class="modal_input" placeholder="Телефон">
+            <input type="text" name="user_name" id="" class="modal_input" placeholder="Имя" required>
+            <input type="tel" name="user_phone " id="phone" class="modal_input" placeholder="Телефон" required>
             <input type="email" name="user_mail" id="" class="modal_input" placeholder="Почта">
             <div class="modal_form_btn" ><button type="submit">бесплатная консультация</button></div>
         </form>
        </div>
    </div>
   
-   <script>
-    
-
-    new WOW().init();
-    </script>
+   
+   <script src="./js/wow.min.js"></script>
+    <script src="./js/timer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/jquery.maskedinput.min.js"></script>
    <script src="//code.jivosite.com/widget.js" data-jv-id="TCG5VSBuaI" async></script>
    <script>
+new WOW().init();
+
+
+
        $(document).ready(function(){
+        $("#phone").mask("8 (999) 999-9999");
+        $("#phone1").mask("8 (999) 999-9999");
+        $("#phone2").mask("8 (999) 999-9999");
 	// плавное перемещение страницы к нужному блоку
-	$(".nav_menu_item").click(function () {
+	    $(".nav_menu_item").click(function () {
 		elementClick = $(this).attr("href");
 		destination = $(elementClick).offset().top;
 		$("body,html").animate({scrollTop: destination }, 1800);
 	});
 });
-   
+
 
     $('.menu_humb').on('click', function(e){
     e.preventDefault;
     $(this).toggleClass('menu_humb_active');
     $('.nav_menu_humb').toggleClass('nav_menu_humb_active');
     });
+
+    $('.nav_menu_humb_item').on('click', function(e){
+    e.preventDefault;
+    $('.menu_humb').toggleClass('menu_humb_active');
+    $('.nav_menu_humb').toggleClass('nav_menu_humb_active');
+    });
+
 
    countdown();
    modal();
